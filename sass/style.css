@@ -507,7 +507,7 @@ html.modalActive {
     width: 100% !important;
   }
   .tabWrap [data-tab-target] {
-    font-size: 5vmin !important;
+    font-size: 3.5vmin !important;
   }
   .content.active {
     height: 100%;

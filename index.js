@@ -29,8 +29,6 @@ let speed = 180
 window.onscroll = function(e){
    
     let target = stat.offsetTop-document.documentElement.clientHeight
-    console.log(target)
-    console.log(window.pageYOffset)
     if(window.pageYOffset>target){
         count.forEach(element => {
             let  add = () =>{
