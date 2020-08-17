@@ -24,8 +24,7 @@ tabTarget.forEach((tab)=>{
 let stat = document.querySelector('.stat')
 let count = document.querySelectorAll('.count')
 let speed = 180
-console.log(stat.offsetTop)
-console.log(window.pageYOffset)
+
 
 window.onscroll = function(e){
    
