@@ -32,6 +32,9 @@ html.modalActive {
        align-items: center;
        .logo{
            font-size: 30px;
+           a{
+               color: white;
+           }
        }
 
        .link{
@@ -303,7 +306,7 @@ html.modalActive {
     width: 100%;
     display: flex;
     justify-content: center;
-    background-image: url(/images/joanna-kosinska-7ACuHoezUYk-unsplash.jpg);
+    background-image: url(images/joanna-kosinska-7ACuHoezUYk-unsplash.jpg);
     background-position: right;
     
     color: white;
