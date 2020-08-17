@@ -21,33 +21,52 @@ tabTarget.forEach((tab)=>{
     })
 })
 
+let stat = document.querySelector('.stat')
 let count = document.querySelectorAll('.count')
-let speed = 150
-count.forEach(element => {
-    let  add = () =>{
-        let targetCount = element.getAttribute('data-tab-count')
-        let increment = +Math.ceil( targetCount / speed);
-        let current = +element.innerText;
-        
+let speed = 180
+console.log(stat.offsetTop)
+console.log(window.pageYOffset)
 
-        if(current<targetCount){
-            element.innerText = current + increment;
-            setTimeout(() => {
-                add()
-            }, 30);
-        } else {
-            element.innerText = targetCount
-        }
-
+window.onscroll = function(e){
+   
+    let target = stat.offsetTop-document.documentElement.clientHeight
+    console.log(target)
+    console.log(window.pageYOffset)
+    if(window.pageYOffset>target){
+        count.forEach(element => {
+            let  add = () =>{
+                let targetCount = element.getAttribute('data-tab-count')
+                let increment = +Math.ceil( targetCount / speed);
+                let current = +element.innerText;
+                
         
+                if(current<targetCount){
+                    element.innerText = current + increment;
+                    setTimeout(() => {
+                        add()
+                    }, 50);
+                } else {
+                    element.innerText = targetCount
+                }
+        
+                
+            }
+            
+            add()
+            
+            
+            
+            
+        });
+       
     }
-    
-    add()
-    
-    
-    
-    
-});
+
+}
+
+
+
+
+
 
 let hamburger = document.querySelector('.hamburger')
 let navModal = document.querySelector('.navModal')
@@ -58,11 +77,6 @@ hamburger.addEventListener("click",(e)=>{
     navModal.classList.toggle('active');
     html.classList.toggle("modalActive");
 })
-
-
-
-
-
 
 $('.owl-carousel').owlCarousel({
     autoplay:true,
